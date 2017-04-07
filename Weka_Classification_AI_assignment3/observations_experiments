@@ -1,0 +1,333 @@
+Decision Tree- Bank DATA-10 Fold
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       40834               90.3187 %
+Incorrectly Classified Instances      4377                9.6813 %
+Kappa statistic                          0.4844
+Mean absolute error                      0.1269
+Root mean squared error                  0.2773
+Relative absolute error                 61.4157 %
+Root relative squared error             86.2823 %
+Total Number of Instances            45211     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.959    0.519    0.933      0.959    0.946      0.489    0.843     0.947     1
+                 0.481    0.041    0.609      0.481    0.538      0.489    0.843     0.486     2
+Weighted Avg.    0.903    0.463    0.895      0.903    0.898      0.489    0.843     0.893     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 38289  1633 |     a = 1
+  2744  2545 |     b = 2
+
+
+DecisionTree_bank_select-Attributes_
+
+
+   10(100 %)    1 age
+           0(  0 %)    2 job
+          10(100 %)    3 marital
+           9( 90 %)    4 education
+           7( 70 %)    5 default
+          10(100 %)    6 balance
+           2( 20 %)    7 housing
+           7( 70 %)    8 loan
+          10(100 %)    9 contact
+          10(100 %)   10 day
+          10(100 %)   11 month
+          10(100 %)   12 duration
+          10(100 %)   13 campaign
+           4( 40 %)   14 pdays
+           9( 90 %)   15 previous
+          10(100 %)   16 poutcome
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       40848               90.3497 %
+Incorrectly Classified Instances      4363                9.6503 %
+Kappa statistic                          0.4891
+Mean absolute error                      0.123 
+Root mean squared error                  0.2744
+Relative absolute error                 59.5391 %
+Root relative squared error             85.3803 %
+Total Number of Instances            45211     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.958    0.511    0.934      0.958    0.946      0.493    0.851     0.951     1
+                 0.489    0.042    0.609      0.489    0.542      0.493    0.851     0.500     2
+Weighted Avg.    0.903    0.456    0.896      0.903    0.899      0.493    0.851     0.898     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 38263  1659 |     a = 1
+  2704  2585 |     b = 2
+
+
+Wine _Data
+
+
+
+J48_no feature Select
+
+=== Summary ===
+
+Correctly Classified Instances        3852               59.61   %
+Incorrectly Classified Instances      2610               40.39   %
+Kappa statistic                          0.3893
+Mean absolute error                      0.1702
+Root mean squared error                  0.3756
+Relative absolute error                 63.6902 %
+Root relative squared error            102.7441 %
+Total Number of Instances             6462     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.176    0.020    0.229      0.176    0.199      0.177    0.641     0.102     4
+                 0.650    0.183    0.637      0.650    0.643      0.464    0.768     0.582     5
+                 0.635    0.310    0.616      0.635    0.625      0.324    0.681     0.587     6
+                 0.512    0.088    0.539      0.512    0.525      0.433    0.760     0.415     7
+                 0.363    0.015    0.432      0.363    0.394      0.379    0.760     0.269     8
+Weighted Avg.    0.596    0.213    0.591      0.596    0.593      0.385    0.724     0.531     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e   <-- classified as
+   38   91   68   13    6 |    a = 4
+   71 1390  608   59   10 |    b = 5
+   43  594 1802  358   39 |    c = 6
+   12   95  383  552   37 |    d = 7
+    2   13   65   43   70 |    e = 8
+
+
+
+=== Attribute selection 10 fold cross-validation (stratified), seed: 1 ===
+
+number of folds (%)  attribute
+          10(100 %)    1 fixed_acidity
+          10(100 %)    2 volatile_acidity
+           9( 90 %)    3 citric_acid
+          10(100 %)    4 residual_sugar
+           9( 90 %)    5 chlorides
+           8( 80 %)    6 free_sulfurdioxide
+          10(100 %)    7 total_sufurdioxide
+          10(100 %)    8 density
+          10(100 %)    9 pH
+           9( 90 %)   10 sulphates
+          10(100 %)   11 alcohol
+
+j48_FeatureSelect
+
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3795               58.7279 %
+Incorrectly Classified Instances      2667               41.2721 %
+Kappa statistic                          0.3746
+Mean absolute error                      0.1802
+Root mean squared error                  0.3725
+Relative absolute error                 67.4131 %
+Root relative squared error            101.9092 %
+Total Number of Instances             6462     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.111    0.021    0.155      0.111    0.129      0.106    0.603     0.065     4
+                 0.649    0.192    0.626      0.649    0.637      0.453    0.762     0.574     5
+                 0.630    0.311    0.614      0.630    0.622      0.319    0.677     0.585     6
+                 0.506    0.095    0.517      0.506    0.511      0.415    0.760     0.416     7
+                 0.254    0.011    0.412      0.254    0.314      0.307    0.733     0.217     8
+Weighted Avg.    0.587    0.217    0.580      0.587    0.583      0.372    0.718     0.525     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e   <-- classified as
+   24  102   71   16    3 |    a = 4
+   63 1388  599   83    5 |    b = 5
+   51  613 1788  349   35 |    c = 6
+   13  104  389  546   27 |    d = 7
+    4   10   67   63   49 |    e = 8
+
+
+Naive No Feature Select
+
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        2956               45.7444 %
+Incorrectly Classified Instances      3506               54.2556 %
+Kappa statistic                          0.2082
+Mean absolute error                      0.2447
+Root mean squared error                  0.37  
+Relative absolute error                 91.5509 %
+Root relative squared error            101.2211 %
+Total Number of Instances             6462     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.120    0.027    0.134      0.120    0.127      0.098    0.704     0.077     4
+                 0.573    0.254    0.528      0.573    0.549      0.313    0.741     0.546     5
+                 0.390    0.309    0.496      0.390    0.437      0.084    0.562     0.488     6
+                 0.550    0.202    0.352      0.550    0.429      0.295    0.738     0.328     7
+                 0.036    0.005    0.194      0.036    0.061      0.072    0.756     0.094     8
+Weighted Avg.    0.457    0.255    0.461      0.457    0.451      0.195    0.661     0.455     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e   <-- classified as
+   26   95   67   27    1 |    a = 4
+   77 1225  677  159    0 |    b = 5
+   72  863 1105  786   10 |    c = 6
+   18  122  328  593   18 |    d = 7
+    1   17   50  118    7 |    e = 8
+
+
+
+Naive Feature_select
+number of folds (%)  attribute
+           0(  0 %)    1 fixed_acidity
+          10(100 %)    2 volatile_acidity
+          10(100 %)    3 citric_acid
+           0(  0 %)    4 residual_sugar
+           0(  0 %)    5 chlorides
+           0(  0 %)    6 free_sulfurdioxide
+           0(  0 %)    7 total_sufurdioxide
+           0(  0 %)    8 density
+           2( 20 %)    9 pH
+           4( 40 %)   10 sulphates
+          10(100 %)   11 alcohol
+
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3389               52.4451 %
+Incorrectly Classified Instances      3073               47.5549 %
+Kappa statistic                          0.2449
+Mean absolute error                      0.2381
+Root mean squared error                  0.3497
+Relative absolute error                 89.0795 %
+Root relative squared error             95.6758 %
+Total Number of Instances             6462     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.069    0.009    0.205      0.069    0.104      0.102    0.678     0.086     4
+                 0.570    0.188    0.600      0.570    0.585      0.387    0.768     0.580     5
+                 0.653    0.494    0.508      0.653    0.571      0.159    0.591     0.499     6
+                 0.282    0.076    0.425      0.282    0.339      0.244    0.760     0.378     7
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.777     0.091     8
+Weighted Avg.    0.524    0.292    0.499      0.524    0.504      0.242    0.686     0.480     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e   <-- classified as
+   15  107   89    5    0 |    a = 4
+   25 1219  866   28    0 |    b = 5
+   27  653 1851  305    0 |    c = 6
+    5   52  718  304    0 |    d = 7
+    1    1  118   73    0 |    e = 8
+
+
+
+J48_noFeature_select
+
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3601               55.7258 %
+Incorrectly Classified Instances      2861               44.2742 %
+Kappa statistic                          0.2847
+Mean absolute error                      0.2316
+Root mean squared error                  0.346 
+Relative absolute error                 86.6459 %
+Root relative squared error             94.6531 %
+Total Number of Instances             6462     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.065    0.003    0.400      0.065    0.112      0.150    0.648     0.093     4
+                 0.579    0.162    0.638      0.579    0.607      0.428    0.736     0.573     5
+                 0.733    0.516    0.526      0.733    0.613      0.221    0.615     0.513     6
+                 0.245    0.047    0.513      0.245    0.331      0.273    0.726     0.354     7
+                 0.031    0.003    0.250      0.031    0.055      0.079    0.717     0.084     8
+Weighted Avg.    0.557    0.288    0.549      0.557    0.531      0.292    0.678     0.480     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e   <-- classified as
+   14  101   97    4    0 |    a = 4
+   15 1238  875    9    1 |    b = 5
+    6  559 2079  184    8 |    c = 6
+    0   40  766  264    9 |    d = 7
+    0    1  132   54    6 |    e = 8
+
+
+J48_featureSelect
+
+=== Attribute selection 10 fold cross-validation (stratified), seed: 1 ===
+
+number of folds (%)  attribute
+           6( 60 %)    1 fixed_acidity
+          10(100 %)    2 volatile_acidity
+           9( 90 %)    3 citric_acid
+          10(100 %)    4 residual_sugar
+           9( 90 %)    5 chlorides
+           8( 80 %)    6 free_sulfurdioxide
+          10(100 %)    7 total_sufurdioxide
+           0(  0 %)    8 density
+           8( 80 %)    9 pH
+          10(100 %)   10 sulphates
+          10(100 %)   11 alcohol
+
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        3519               54.4568 %
+Incorrectly Classified Instances      2943               45.5432 %
+Kappa statistic                          0.2542
+Mean absolute error                      0.2358
+Root mean squared error                  0.3486
+Relative absolute error                 88.2235 %
+Root relative squared error             95.3648 %
+Total Number of Instances             6462     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.023    0.002    0.250      0.023    0.042      0.067    0.603     0.069     4
+                 0.546    0.157    0.633      0.546    0.586      0.406    0.715     0.556     5
+                 0.756    0.564    0.512      0.756    0.611      0.200    0.603     0.502     6
+                 0.184    0.037    0.501      0.184    0.269      0.229    0.700     0.313     7
+                 0.016    0.002    0.231      0.016    0.029      0.053    0.681     0.062     8
+Weighted Avg.    0.545    0.305    0.533      0.545    0.509      0.264    0.658     0.461     
+
+=== Confusion Matrix ===
+
+    a    b    c    d    e   <-- classified as
+    5  103  104    4    0 |    a = 4
+   11 1168  937   20    2 |    b = 5
+    4  544 2145  141    2 |    c = 6
+    0   27  848  198    6 |    d = 7
+    0    3  155   32    3 |    e = 8
+
+
+
+

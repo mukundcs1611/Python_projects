@@ -1,0 +1,21 @@
+Tester:     weka.experiment.PairedCorrectedTTester -G 4 -D 1 -R 2 -S 0.05 -result-matrix "weka.experiment.ResultMatrixPlainText -mean-prec 2 -stddev-prec 2 -col-name-width 0 -row-name-width 25 -mean-width 0 -stddev-width 0 -sig-width 0 -count-width 5 -print-col-names -print-row-names -enum-col-names"
+Analysing:  F_measure
+Datasets:   1
+Resultsets: 3
+Confidence: 0.05 (two tailed)
+Sorted by:  -
+Date:       11/22/16 12:57 AM
+
+
+Dataset                   (1) bayes.N | (2) rule (3) tree
+---------------------------------------------------------
+hepatitis                (100)   0.64 |   0.36 *   0.41 *
+---------------------------------------------------------
+                              (v/ /*) |  (0/0/1)  (0/0/1)
+
+
+Key:
+(1) bayes.NaiveBayes
+(2) rules.JRip
+(3) trees.J48
+

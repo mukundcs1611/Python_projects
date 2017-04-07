@@ -1,0 +1,249 @@
+﻿P3-Artificial Intelligence
+
+
+
+
+Introduction: a description of your work for this assignment
+
+Datasets: a description of the datasets
+
+Preprocessing: in case you needed to modify your data (i.e. cleaning, discretization, normalize, remove samples with missing values, remove noise, or other)
+
+Feature Selection: description of how you performed the feature selection step for your experiments
+Results: the results of your experiments
+Conclusions: conclusions from your results (analyze your results and create your conclusions)
+
+
+Hepatitis:
+
+Before performing the experiments , I have used the experimenter to find out the best classifier out of three 
+Summary of the experiment:
+
+Dataset                   (1) bayes.N | (2) rule (3) tree
+---------------------------------------------------------
+hepatitis                (100)   0.64 |   0.36 *   0.41 *
+---------------------------------------------------------
+                              (v/ /*) |  (0/0/1)  (0/0/1)
+
+
+Key:
+(1) bayes.NaiveBayes
+(2) rules.JRip
+(3) trees.J48
+
+Using this we see that Naive Bayes should outperform .
+
+Classifier 1 :J48
+
+
+1.Without Feature Selection:
+The Decision tree on the dataset returned an accuracy of 83.871% and looking at the confusion matrix of the output we can say that more percentage of 'DIE' class are classified incorrect .
+
+Incorrectly Classified Instances        25               16.129  %
+
+>out of those 25 18 instances are of DIE class
+>ROC Area which tells how good the model is 0.708
+
+
+2.With Feature Selection
+
+For Selecting Features, I have used the following combination:
+ ->Attribute Evaluator : InfoGainAttributeEval( using J48 as classifier)
+ ->Search Method : BestFirst (Default)
+ ->AttributeSelectionMode: 10 Fold Cross-Validation	
+
+After the Run :
+I chose top 11, Ordered With Decreasing level of confidence 
+
+1.ALBUMIN(17)
+2.Bilirubin(14)
+3.Ascites(12)
+4.Spiders(11)
+5.Fatigue(5)
+6.Histology(19)
+7.Malaise(6)
+8.Varices(13)
+9.Protime(18)
+10.Sex(2)
+11.SpleenPalpable(10)
+
+ALthough the overall accuracy of the model decreased , the number of incorrectly classified 'LIVE' instances have decreased	from 116 to 114.Not Very Much Significant .Feature Selection has reduced the overall efficiency
+
+
+NAIVE BAYES
+
+1.Without Feature Selection
+
+Classifier Accuracy : 84.5161
+ROC AREA:0.860
+Incorrectly Classified DIE instances : 10 (Very Good)
+2.With Feature Selection
+
+used a similar criteria as before Choosing 7 Attributes 
+              AGE
+              SEX
+              STEROID
+              SPLEEN_PALPABLE
+              SPIDERS
+              ASCITES
+              ALBUMIN
+Accuracy of the model : 86.4516
+No of Incorrectly classified DIE Instances : 10
+No of incorrectly classified LIVE instances : 11(Better than the results without feature select)
+ROC Area : 0.890 (Improved)
+
+
+Classifier 3 :JRIP
+
+1.Without Feature Selection:
+Classifier Accuracy :78.0645%
+No of Incorrectly classified DIE Instances : 21
+No of incorrectly classified LIVE instances : 13
+ROC Area : 0.664(Worst Compared to the above ones)
+
+2.With Feature Selection :
+Used Different Search Method, used i=one is GreedyStepwise
+1.ALBUMIN
+2.AGE
+3.SPLEEN_PALPABLE
+4.SPIDERS
+5.BILIRUBIN
+6.SGOT
+7SEX
+8PROTIME
+9ASCITES
+10VARICES
+
+Classifier Accuracy : 80.6452%(Improved compared to JRIP without feature Selection)
+No of Incorrectly classified DIE Instances : 18(Better than the results without feature select)
+No of incorrectly classified LIVE instances : 12(Better than the results without feature select)
+ROC Area(Same for both classes) : 0.682 (better)
+
+
+
+WInE_quality
+
+CLASSIFIER 1 : J48
+1.Without Attribute Selection:
+Correctly Classified Instances        3852               59.61   %
+Incorrectly Classified Instances      2610               40.39   %
+ROC AVg:0.724
+
+2.With Attribute Selection
+Search Method : GreedyStepwise
+TOp 10 Attributes:
+1.Fixed_acidity(1)
+2.Volatile_acidity(2)
+3.Residual_sugar(4)
+4.total_sulfurdioxide(7)
+5.density(8)
+6.pH(9)
+7.Alcohol (11)
+8.citric_acid(3)
+9.chlorides(5)
+10.Sulphates(10)
+
+Correctly Classified Instances         3795               58.7279 %
+Incorrectly Classified Instances       2667               41.2721 %
+ROC Avg: 0.718
+Accuracy,ROC Average Decreased 
+
+Classifier 2 : Naive Bayes
+1.Without Attribute Selection 
+Correctly Classified Instances        2956               45.7444 %
+Incorrectly Classified Instances      3506               54.2556 %
+ROC Average 0.661
+2.With Attribute Selection :
+Search Method : BestFirst
+AttributeEvaluater : ClassifierSubsetEval
+AttributeSelectionMOde: 10 Fold Cross Validation
+Correctly Classified Instances        3389               52.4451 %
+Incorrectly Classified Instances      3073               47.5549 %
+Average ROC: 0.686
+
+
+Classifier 3: JRIP
+1.Without Feature Selection:
+Correctly Classified Instances        3601               55.7258 %
+Incorrectly Classified Instances      2861               44.2742 %
+ROC Average : 0.678
+
+2.With Feature Select :
+Selected top 9 features
+Correctly Classified Instances        3620               56.0198 %
+Incorrectly Classified Instances      2842               43.9802 %
+ROC AVerage 0.673
+
+Bank DATA
+
+Classifier 1 : J48
+1.Without Feature Selection
+Correctly Classified Instances       40834               90.3187 %
+Incorrectly Classified Instances      4377                9.6813 %
+Avg ROC AREA: 0.843
+
+2.With Feature Selection
+Selecting top 10 Attributes ,
+Correctly Classified Instances       40848               90.3497 %
+Incorrectly Classified Instances      4363                9.6503 %
+AVG ROC AREA: 0.851
+
+Classifier 2: NaiveBayes
+1.Without Feature Selection
+Correctly Classified Instances       39789               88.0073 %
+Incorrectly Classified Instances      5422               11.9927 %
+Avg ROC ARea: 0.861(Better than JRIP and J48)
+2.With Feature Selection 
+Top 8 Attributes are selected 16,11,2,4,12,3,6,7
+
+
+Correctly Classified Instances       40359               89.2681 %
+Incorrectly Classified Instances      4852               10.7319 %
+Average ROC ARea: 0.878
+
+
+Classifier 3 : JRIP
+1.Without Feature Selection
+Correctly Classified Instances       40666               89.9471 %
+Incorrectly Classified Instances      4545               10.0529 %
+Avg ROC ARea: 0.677 (Biased towards one class)
+
+2.With Feature Selection
+Attributes Selected :Ordered in decreasing order of confidence
+1.Duration(12)
+2.poutcome(16)
+3.day(10)
+4.month(11)
+5.pdays(15)
+6.age(1)
+7.Job(2)
+8.marital(3)
+9.Education(4)
+10.Default(5)
+
+Correctly Classified Instances       40644               89.8985 %
+Incorrectly Classified Instances      4567               10.1015 %
+Average ROC Area:0.663
+
+
+
+
+
+
+
+
+Conclusion:
+for data set 1 : naive bayes is the best classifier followed by j48
+for data set 2 : J48 decision tree is best followed by JRIP
+for data set 3 both J48,Naive perform similar but naive has a slightly better ROC (though it has lower accuracy by a very small margin)
+
+Feature Selection in majority of the situations had a very small effect in the accuracy ,also ROC area is slightly increased with feature selection.
+
+
+
+
+
+
+
+
+
