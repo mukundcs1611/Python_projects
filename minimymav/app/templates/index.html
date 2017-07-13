@@ -1,0 +1,46 @@
+<html>
+
+
+<head>
+<title>Welcome to mini-mymav</title>
+<link rel="stylesheet" href="static/stylesheets/bootstrap.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class='col md-6 well'>
+		<h2>My name is {{l['name']}}</h2>
+		<h3>Id: {{l['id']}}</h3>
+		<h3>Class:Cloud COmputing Section 3</h3>
+		<img src='/static/Molly(1).jpg'>
+
+
+		<form action="login" method="post" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for='id'>LoginID:</label>
+				<input class='form-control'type="text" name="id"><br /> <br /> 
+				<label for='pass'>Password:</label>
+				<input	class='form-control' type="text" name="pass"><br /> <br />
+				<button class='btn btn-primary' type="submit">Login</button>
+			</div>
+		</form>
+		<div class='form-group'>
+			<form action='register' method='post' enctype="multipart/form-data">
+			<label for='name' >Enter your firstname:</label>
+			<input class='form-control' type='text' name='name'><br/><br/>
+			<label for='loginid' >Enter your desired id:</label>
+			<input class='form-control' type='text' name='loginid'><br/><br/>
+			<label for='pass' >Enter your Password:</label>
+			<input class='form-control' type='text' name='pass'><br/><br/>
+			<button class='btn btn-primary' type="submit">Register</button>
+			</form>
+		</div>
+		<form action="getcourse" method="post" enctype="multipart/form-data">
+			<label for ="course">Courseno</label><input value="" id='course' type="text" name="course">
+			<label for ="instructor">Instructor</label><input value="" id='instructor' type="text" name="instructor">
+			<button type="submit" id="b" class="btn">Show results</button> 
+		</form>
+		
+	</div>
+</body>
+</html>
