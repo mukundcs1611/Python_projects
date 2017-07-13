@@ -1,0 +1,8 @@
+Flask implementation of a student enrollment system (MyMav is the application used in our school hence the name minimymav)
+
+This Project is supposed to be run in a dockercontainer, the needed dockerfiles are included. 
+This Started as a assignment for my course Cloud Computing at UTA and I am still bringing some new changes to the code. 
+
+I have run it in Amazon EC2 with docker installed in the machine .
+
+For instructions about how to get started with the project email me :mukundcs1611@gmail.com
