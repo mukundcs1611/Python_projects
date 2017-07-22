@@ -6,3 +6,8 @@ This Started as a assignment for my course Cloud Computing at UTA and I am still
 I have run it in Amazon EC2 with docker installed in the machine .
 
 For instructions about how to get started with the project email me :mukundcs1611@gmail.com
+
+Update: I have also included a angular front end which will later replace this project . Backend will be implemented in the same fashion in  python
+using flask .
+
+Location: https://github.com/mukundcs1611/minimymav_angular
